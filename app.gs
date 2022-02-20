@@ -354,23 +354,4 @@ function doPost(e) {
     }),
   });
 
-  //加入群組時顯示歡迎訊息
-  UrlFetchApp.fetch(url, {
-    'headers': {
-      'Content-Type': 'application/json; charset=UTF-8',
-      'Authorization': 'Bearer ' + CHANNEL_ACCESS_TOKEN,
-    },
-    "events": [
-    {
-      "replyToken": replyToken,
-      "type": "join",
-      "mode": "active",
-      "source": {
-        "type": "group"
-      }
-    }
-    ]
-  });
-
-
 }
